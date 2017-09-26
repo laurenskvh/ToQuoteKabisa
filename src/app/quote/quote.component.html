@@ -1,0 +1,40 @@
+<header>
+  <div class="title">
+    <h2><i>"{{quote?.quote}}"</i></h2>
+    <p>{{quote?.author}}</p>
+    <div id="progress-button" class="progress-button">
+      <br />
+      <button (click)="nextQuote()"><span>Next</span></button>
+    </div>
+
+    <div id="progress-button" class="progress-button">
+      <br />
+      <button (click)="googleQuote(quote.quote)"><span>Learn more</span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <h2><i>"Not all that glitters is gold"</i></h2>
+  <p>Quotes can truly have a lasting impact on the lives of many, the wisdom of writers and poets should not be underestimated.
+    It is for that reason that sites like these exist, a randomized algorithm could help you find a piece of advice that
+    will last you the rest of your life.</p>
+  <p>Or, in this case, they can be used as entertainment. Bittersweet entertainment.</p>
+</main>
+<main>
+  <h2>Suggest a quote</h2>
+    <form (ngSubmit)="submitNewQuote()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name"  required [(ngModel)]="name" name="name">
+      </div>
+ 
+      <div class="form-group">
+        <label for="quoteContent">Quote</label>
+        <input type="text" class="form-control" required [(ngModel)]="quoteContent" name="quoteContent" id="quoteContent">
+      </div>
+ 
+      <button type="submit" class="btn btn-secondary">Submit</button> 
+      <p [class.show]="!isVisibleBoolean" class="step">{{message}}</p>
+    </form>
+</main>

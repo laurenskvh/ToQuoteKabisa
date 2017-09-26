@@ -1,0 +1,89 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900);
+
+/* Main styling */
+main {
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+form {
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+header {
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("~/assets/images/backgroundLaptop.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+/* Text styling */
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 3rem;
+  white-space: nowrap;
+}
+h2 {
+  font-size: 2rem;
+}
+p {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+
+/* Transitioning button */
+.progress-button {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+}
+.progress-button button {
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+	width: 125px;
+	height: 50px;
+	border: 2px solid gray;
+	border-radius: 40px;
+	background: transparent;
+	color: white;
+	letter-spacing: 1px;
+	font-size: 18px;
+	font-family: 'Montserrat', sans-serif;
+	-webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+	transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+}
+
+.progress-button button:hover {
+	background-color: gray;
+	color: #fff;
+}
+
+/* Disappearing text */
+.show{
+opacity: 1 !important;
+}
+.step{
+opacity: 0;
+transition: 4s ease-in-out all;
+}
